@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for hono-open-api-starter-flyio on 2024-10-08T07:49:32-06:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'hono-open-api-starter-flyio'
+primary_region = 'den'
+
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
