@@ -2,11 +2,11 @@ import { eq } from "drizzle-orm";
 import * as HttpStatusCodes from "stoker/http-status-codes";
 import * as HttpStatusPhrases from "stoker/http-status-phrases";
 
-import type { AppRouteHandler } from "@/lib/types";
+import type { AppRouteHandler } from "@/server/api/types";
 
-import db from "@/db";
-import { tasks } from "@/db/schema";
-import { ZOD_ERROR_CODES, ZOD_ERROR_MESSAGES } from "../../../../vercel-nextjs-hono-node/src/server/api/constants";
+import db from "@/server/db";
+import { tasks } from "@/server/db/schema";
+import { ZOD_ERROR_CODES, ZOD_ERROR_MESSAGES } from "@/server/api/constants";
 
 import type { CreateRoute, GetOneRoute, ListRoute, PatchRoute, RemoveRoute } from "./tasks.routes";
 

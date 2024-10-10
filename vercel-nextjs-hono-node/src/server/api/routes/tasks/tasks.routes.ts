@@ -3,8 +3,8 @@ import * as HttpStatusCodes from "stoker/http-status-codes";
 import { jsonContent, jsonContentRequired } from "stoker/openapi/helpers";
 import { createErrorSchema, IdParamsSchema } from "stoker/openapi/schemas";
 
-import { insertTasksSchema, patchTasksSchema, selectTasksSchema } from "@/db/schema";
-import { notFoundSchema } from "../../../../vercel-nextjs-hono-node/src/server/api/constants";
+import { insertTasksSchema, patchTasksSchema, selectTasksSchema } from "@/server/db/schema";
+import { notFoundSchema } from "@/server/api/constants";
 
 const tags = ["Tasks"];
 
